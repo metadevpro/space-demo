@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+}
+
+select {
+    font-size: 12pt;
+    width: 30ch;
+}
+
+input[type="text"] {
+    font-size: 12pt;
+    border-radius: 5px;
+    border: 3px solid yellow;
+    background-color: lightyellow;
+    padding-left: 5px;
+    width: 60ch;
+}
+
+button {
+    font-size: 18pt;
+    border-radius: 10px;
+    border: 0;
+    background-color: #31A131;
+    cursor: pointer;
+}
+

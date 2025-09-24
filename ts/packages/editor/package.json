@@ -1,0 +1,38 @@
+{
+  "name": "ts-space-demo-editor",
+  "version": "0.0.1-alpha.0",
+  "description": "Implementation of an editor (as Web app) for the space DSL",
+  "private": true,
+  "type": "module",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LionWeb-io/space-demo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LionWeb-io/space-demo/issues"
+  },
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "clean": "npx rimraf dist node_modules",
+    "check": "tsc --noEmit",
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "dependencies": {
+    "@lionweb/class-core": "0.7.0-beta.14",
+    "mobx": "6.13.7",
+    "mobx-react": "9.2.0",
+    "nanoid": "5.1.6",
+    "react": "19.1.1",
+    "react-dom": "19.1.1"
+  },
+  "devDependencies": {
+    "@parcel/transformer-typescript-tsc": "2.16.0",
+    "@types/react": "19.1.13",
+    "@types/react-dom": "19.1.9",
+    "parcel": "2.16.0",
+    "typescript": "5.9.2"
+  }
+}
