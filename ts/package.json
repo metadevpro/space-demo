@@ -23,5 +23,8 @@
   "workspaces": [
     "./packages/build",
     "./packages/editor"
-  ]
+  ],
+  "dependencies": {
+    "typescript": "^5.9.3"
+  }
 }
