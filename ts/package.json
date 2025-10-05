@@ -1,0 +1,27 @@
+{
+  "name": "ts-space-demo",
+  "version": "0.0.1-alpha.0",
+  "description": "Implementation of a space DSL with LionWeb",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LionWeb-io/space-demo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LionWeb-io/space-demo/issues"
+  },
+  "devDependencies": {
+    "rimraf": "6.0.1"
+  },
+  "scripts": {
+    "clean": "npm run clean -w packages --if-present && npx rimraf node_modules",
+    "generate": "npm run generate -w packages --if-present",
+    "build": "npm run build -w packages --if-present",
+    "start": "npm run start -w packages --if-present"
+  },
+  "private": true,
+  "workspaces": [
+    "./packages/build",
+    "./packages/editor"
+  ]
+}

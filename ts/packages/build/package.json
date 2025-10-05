@@ -1,0 +1,30 @@
+{
+  "name": "ts-space-demo-build",
+  "version": "0.0.1-alpha.0",
+  "description": "Build the language's types",
+  "private": true,
+  "main": "dist/generate.js",
+  "type": "module",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LionWeb-io/space-demo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LionWeb-io/space-demo/issues"
+  },
+  "scripts": {
+    "clean": "npx rimraf dist node_modules",
+    "build": "tsc",
+    "pregenerate": "npm run build",
+    "generate": "node dist/generate.js"
+  },
+  "devDependencies": {
+    "@lionweb/class-core-generator": "0.7.0-beta.14",
+    "@lionweb/core": "0.7.0-beta.14",
+    "@lionweb/io-lionweb-mps-specific": "0.7.0-beta.14",
+    "@lionweb/utilities": "0.7.0-beta.14",
+    "@types/node": "24.5.2",
+    "typescript": "5.9.2"
+  }
+}

@@ -1,6 +1,12 @@
-# IntelliJ IDEA:
-/.idea
-/lionweb-typescript.iml
-
 # NPM:
 node_modules/
+
+# TypeScript:
+dist/
+
+# Parcel:
+/.parcel-cache
+
+# IntelliJ IDEA:
+/.idea
+
