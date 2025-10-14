@@ -1,3 +1,3 @@
 #!/bin/sh
 
-./gradlew build runCommandLineTool -Pargs=". -mspace-demo.home=. -ic -lc"
+./gradlew generateMps runCommandLineTool -Pargs=". -mspace-demo.home=. -ic -lc"

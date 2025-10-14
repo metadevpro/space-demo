@@ -5,8 +5,13 @@
     "declarationMap": true,
     "sourceMap": true,
     "rootDir": "src",
-    "outDir": "dist/",
     "experimentalDecorators": true,
-    "jsx": "react"
+    "jsx": "react",
+    "resolveJsonModule": true,
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "lib": [ "dom", "esnext" ],
+    "outDir": "dist/"
   }
 }

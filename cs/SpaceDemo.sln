@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceDemo.Validator", "SpaceDemo.Validator\SpaceDemo.Validator.csproj", "{BF0C1EA6-5656-4790-8D26-E1890472A422}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceDemo.Languages", "SpaceDemo.Languages\SpaceDemo.Languages.csproj", "{5EE89FC0-EC10-4E52-8A86-58BA600B2DC6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{39A6CB19-EB6A-4E2D-9D53-A1D9737B4C5E}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Packages.props = Directory.Packages.props
+		README.md = README.md
+		..\ts\packages\editor\src\gen\Finding.g.ts = ..\ts\packages\editor\src\gen\Finding.g.ts
+		..\ts\packages\editor\src\gen\PowerBudget.g.ts = ..\ts\packages\editor\src\gen\PowerBudget.g.ts
+		..\playbook.md = ..\playbook.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceDemo.Repository", "SpaceDemo.Repository\SpaceDemo.Repository.csproj", "{898E2944-C873-439F-A1A6-8953E49C068B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceDemo.Tests", "SpaceDemo.Tests\SpaceDemo.Tests.csproj", "{04A1CF17-AEE9-4083-B544-139E04B9761D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceDemo.Loader", "SpaceDemo.Loader\SpaceDemo.Loader.csproj", "{22DE0FAA-81C8-48EB-A1B3-747280593F53}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF0C1EA6-5656-4790-8D26-E1890472A422}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF0C1EA6-5656-4790-8D26-E1890472A422}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF0C1EA6-5656-4790-8D26-E1890472A422}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF0C1EA6-5656-4790-8D26-E1890472A422}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EE89FC0-EC10-4E52-8A86-58BA600B2DC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EE89FC0-EC10-4E52-8A86-58BA600B2DC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EE89FC0-EC10-4E52-8A86-58BA600B2DC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EE89FC0-EC10-4E52-8A86-58BA600B2DC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{898E2944-C873-439F-A1A6-8953E49C068B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{898E2944-C873-439F-A1A6-8953E49C068B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{898E2944-C873-439F-A1A6-8953E49C068B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{898E2944-C873-439F-A1A6-8953E49C068B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04A1CF17-AEE9-4083-B544-139E04B9761D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04A1CF17-AEE9-4083-B544-139E04B9761D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04A1CF17-AEE9-4083-B544-139E04B9761D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04A1CF17-AEE9-4083-B544-139E04B9761D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22DE0FAA-81C8-48EB-A1B3-747280593F53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22DE0FAA-81C8-48EB-A1B3-747280593F53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22DE0FAA-81C8-48EB-A1B3-747280593F53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22DE0FAA-81C8-48EB-A1B3-747280593F53}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

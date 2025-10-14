@@ -4,9 +4,7 @@ This (sub-)project contains two packages:
 
 * `build`: Takes care of generating required code into the `editor` package.
 
-  **Note** that it currently defines ta space DSL's `Language` instance (=LionCore/M3) itself, but soon, we'll probably pick up one that's exported from MPS.
-
-  Run the generator as follows, from anywhere within this (sub-)project:
+  Run the generator as follows, from inside the `build` package:
 
   ```shell
   $ npm run generate
@@ -14,11 +12,17 @@ This (sub-)project contains two packages:
 
 * `editor`: An implementation of a Web app with which to edit a model according to the space DSL.
 
-  Start the Web app in development mode as follows, from anywhere within this (sub-)project:
+  Start the Web app in development mode as follows, from inside the `editor` package:
 
   ```shell
-  $ npm start
+  $ npm run dev
   ```
 
-  **Note** that it currently *doesn't* use the `lionweb-server` as backend...*yet*.
+  Start the Web app in “production” mode as follows, from inside the `editor` package:
+
+  ```shell
+  $ npm run prod
+  ```
+
+* `echo-ws-server`: A simple WebSocket server that just echoes everything it receives to the console.
 

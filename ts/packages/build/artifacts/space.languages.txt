@@ -1,0 +1,50 @@
+language Finding
+    version: 0.1
+    entities (↓name):
+
+        annotation Finding
+            annotates: Node
+            features (↓name):
+                code: Integer?
+                message: String?
+                severity: Severity?
+
+        enumeration Severity
+            literals:
+                info
+                warning
+                error
+
+
+
+language PowerBudget
+    version: 0.1
+    entities (↓name):
+
+        interface IPowerModuleContent extends INamed
+
+        interface IPowerParticipant
+            features (↓name):
+                continuous: Integer?
+                peak: Integer?
+
+        concept PowerConsumer extends Node implements IPowerModuleContent, IPowerParticipant
+            features (↓name):
+                providedFrom -> PowerSource[0..*]
+
+        <<partition>> concept PowerModule extends Node implements INamed
+            features (↓name):
+                contents: IPowerModuleContent[0..*]
+
+        concept PowerSource extends Node implements IPowerModuleContent, IPowerParticipant
+            features (↓name):
+                kind: PowerSourceKind?
+
+        enumeration PowerSourceKind
+            literals:
+                solar
+                nuclear
+                diesel
+
+
+

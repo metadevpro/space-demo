@@ -1,0 +1,297 @@
+{
+  "serializationFormatVersion": "2023.1",
+  "languages": [
+    {
+      "key": "space-PowerBudget",
+      "version": "0.1"
+    },
+    {
+      "key": "LionCore-builtins",
+      "version": "2023.1"
+    },
+    {
+      "key": "FindingLanguage",
+      "version": "0.1"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "1002563151016857164",
+      "classifier": {
+        "language": "space-PowerBudget",
+        "version": "0.1",
+        "key": "PowerModule"
+      },
+      "properties": [
+        {
+          "property": {
+            "language": "LionCore-builtins",
+            "version": "2023.1",
+            "key": "LionCore-builtins-INamed-name"
+          },
+          "value": "Voyager1"
+        }
+      ],
+      "containments": [
+        {
+          "containment": {
+            "language": "space-PowerBudget",
+            "version": "0.1",
+            "key": "PowerModule-contents"
+          },
+          "children": [
+            "1002563151016857165",
+            "1002563151016885558",
+            "1002563151016885528",
+            "1002563151016885577"
+          ]
+        }
+      ],
+      "references": [],
+      "annotations": [],
+      "parent": null
+    },
+    {
+      "id": "1002563151016857165",
+      "classifier": {
+        "language": "space-PowerBudget",
+        "version": "0.1",
+        "key": "PowerSource"
+      },
+      "properties": [
+        {
+          "property": {
+            "language": "LionCore-builtins",
+            "version": "2023.1",
+            "key": "LionCore-builtins-INamed-name"
+          },
+          "value": "rtg0"
+        },
+        {
+          "property": {
+            "language": "space-PowerBudget",
+            "version": "0.1",
+            "key": "PowerSource-kind"
+          },
+          "value": "PowerSourceKind-nuclear"
+        },
+        {
+          "property": {
+            "language": "space-PowerBudget",
+            "version": "0.1",
+            "key": "IPowerParticipant-peak"
+          },
+          "value": "370"
+        },
+        {
+          "property": {
+            "language": "space-PowerBudget",
+            "version": "0.1",
+            "key": "IPowerParticipant-continuous"
+          },
+          "value": "100"
+        }
+      ],
+      "containments": [],
+      "references": [],
+      "annotations": [
+        "7395118629968919941"
+      ],
+      "parent": "1002563151016857164"
+    },
+    {
+      "id": "7395118629968919941",
+      "classifier": {
+        "language": "FindingLanguage",
+        "version": "0.1",
+        "key": "Finding"
+      },
+      "properties": [
+        {
+          "property": {
+            "language": "FindingLanguage",
+            "version": "0.1",
+            "key": "Finding-severity"
+          },
+          "value": "Severity-warning"
+        },
+        {
+          "property": {
+            "language": "FindingLanguage",
+            "version": "0.1",
+            "key": "Finding-message"
+          },
+          "value": "Total peak of consumers (530) exceeds source peak"
+        },
+        {
+          "property": {
+            "language": "FindingLanguage",
+            "version": "0.1",
+            "key": "Finding-code"
+          },
+          "value": "1"
+        }
+      ],
+      "containments": [],
+      "references": [],
+      "annotations": [],
+      "parent": "1002563151016857165"
+    },
+    {
+      "id": "1002563151016885558",
+      "classifier": {
+        "language": "space-PowerBudget",
+        "version": "0.1",
+        "key": "PowerConsumer"
+      },
+      "properties": [
+        {
+          "property": {
+            "language": "LionCore-builtins",
+            "version": "2023.1",
+            "key": "LionCore-builtins-INamed-name"
+          },
+          "value": "comms"
+        },
+        {
+          "property": {
+            "language": "space-PowerBudget",
+            "version": "0.1",
+            "key": "IPowerParticipant-peak"
+          },
+          "value": "200"
+        },
+        {
+          "property": {
+            "language": "space-PowerBudget",
+            "version": "0.1",
+            "key": "IPowerParticipant-continuous"
+          },
+          "value": "0"
+        }
+      ],
+      "containments": [],
+      "references": [
+        {
+          "reference": {
+            "language": "space-PowerBudget",
+            "version": "0.1",
+            "key": "ODgyNjBiZDctZjQ0MC00ZWNhLTk4NzMtMTJkOTRjYjZlNzQ3LzEwMDI1NjMxNTEwMTY3ODAxOTUvMTAwMjU2MzE1MTAxNjg4NTY0Nw"
+          },
+          "targets": [
+            {
+              "resolveInfo": "rtg0",
+              "reference": "1002563151016857165"
+            }
+          ]
+        }
+      ],
+      "annotations": [],
+      "parent": "1002563151016857164"
+    },
+    {
+      "id": "1002563151016885528",
+      "classifier": {
+        "language": "space-PowerBudget",
+        "version": "0.1",
+        "key": "PowerConsumer"
+      },
+      "properties": [
+        {
+          "property": {
+            "language": "LionCore-builtins",
+            "version": "2023.1",
+            "key": "LionCore-builtins-INamed-name"
+          },
+          "value": "sensorA"
+        },
+        {
+          "property": {
+            "language": "space-PowerBudget",
+            "version": "0.1",
+            "key": "IPowerParticipant-peak"
+          },
+          "value": "200"
+        },
+        {
+          "property": {
+            "language": "space-PowerBudget",
+            "version": "0.1",
+            "key": "IPowerParticipant-continuous"
+          },
+          "value": "15"
+        }
+      ],
+      "containments": [],
+      "references": [
+        {
+          "reference": {
+            "language": "space-PowerBudget",
+            "version": "0.1",
+            "key": "ODgyNjBiZDctZjQ0MC00ZWNhLTk4NzMtMTJkOTRjYjZlNzQ3LzEwMDI1NjMxNTEwMTY3ODAxOTUvMTAwMjU2MzE1MTAxNjg4NTY0Nw"
+          },
+          "targets": [
+            {
+              "resolveInfo": "rtg0",
+              "reference": "1002563151016857165"
+            }
+          ]
+        }
+      ],
+      "annotations": [],
+      "parent": "1002563151016857164"
+    },
+    {
+      "id": "1002563151016885577",
+      "classifier": {
+        "language": "space-PowerBudget",
+        "version": "0.1",
+        "key": "PowerConsumer"
+      },
+      "properties": [
+        {
+          "property": {
+            "language": "LionCore-builtins",
+            "version": "2023.1",
+            "key": "LionCore-builtins-INamed-name"
+          },
+          "value": "sensorB"
+        },
+        {
+          "property": {
+            "language": "space-PowerBudget",
+            "version": "0.1",
+            "key": "IPowerParticipant-peak"
+          },
+          "value": "130"
+        },
+        {
+          "property": {
+            "language": "space-PowerBudget",
+            "version": "0.1",
+            "key": "IPowerParticipant-continuous"
+          },
+          "value": "0"
+        }
+      ],
+      "containments": [],
+      "references": [
+        {
+          "reference": {
+            "language": "space-PowerBudget",
+            "version": "0.1",
+            "key": "ODgyNjBiZDctZjQ0MC00ZWNhLTk4NzMtMTJkOTRjYjZlNzQ3LzEwMDI1NjMxNTEwMTY3ODAxOTUvMTAwMjU2MzE1MTAxNjg4NTY0Nw"
+          },
+          "targets": [
+            {
+              "resolveInfo": "rtg0",
+              "reference": "1002563151016857165"
+            }
+          ]
+        }
+      ],
+      "annotations": [],
+      "parent": "1002563151016857164"
+    }
+  ]
+}

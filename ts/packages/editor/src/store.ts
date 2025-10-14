@@ -1,29 +1,32 @@
-import { nodeBaseDeserializer } from "@lionweb/class-core"
-import { LionWebJsonChunk } from "@lionweb/json"
-import { makeObservable } from "mobx"
+import { INodeBase } from "@lionweb/class-core"
+import { action, makeObservable, observable } from "mobx"
 
-import { SpaceDSLBase } from "./gen/SpaceDSL.g.js"
+import { initializeLionWeb } from "./lionweb"
 
 
-export const deserialized = (chunk: LionWebJsonChunk) =>
-    nodeBaseDeserializer([SpaceDSLBase.INSTANCE])(chunk)
+initializeLionWeb()
+
 
 export class Store {
 
-    // TODO  implement multi-model store?
+    model: INodeBase[] = []
+
+    setModel = (model: INodeBase[]) => {
+        this.model.splice(0, this.model.length)
+        this.model.push(...model)
+    }
 
     constructor() {
         makeObservable(
             this,
             {
-                // TODO
+                model: observable,
+                setModel: action
             }
         )
-        // TODO  implement a reaction that auto-saves
     }
 
 }
-
 
 export const store = new Store()
 

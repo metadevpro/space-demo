@@ -1,0 +1,30 @@
+{
+  "name": "ts-space-demo-echo-ws-server",
+  "version": "0.0.1-alpha.0",
+  "description": "Implementation a WebSocket server that just echoes what it receives",
+  "private": true,
+  "main": "dist/generate.js",
+  "type": "module",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LionWeb-io/space-demo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LionWeb-io/space-demo/issues"
+  },
+  "scripts": {
+    "clean": "npx rimraf dist node_modules",
+    "build": "tsc",
+    "pregenerate": "npm run build",
+    "generate": "node dist/generate.js"
+  },
+  "dependencies": {
+    "ws": "8.18.3"
+  },
+  "devDependencies": {
+    "@types/node": "24.7.0",
+    "@types/ws": "8.18.1",
+    "typescript": "5.9.3"
+  }
+}

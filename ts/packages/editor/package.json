@@ -17,22 +17,30 @@
   "scripts": {
     "clean": "npx rimraf dist node_modules",
     "check": "tsc --noEmit",
-    "start": "parcel",
-    "build": "parcel build"
+    "dev": "parcel serve --port 1234 --hmr-port 1236 src/index.html",
+    "build": "parcel build",
+    "preprod": "npm run build",
+    "prod": "http-server dist/ --port 1234"
   },
   "dependencies": {
-    "@lionweb/class-core": "0.7.0-beta.14",
-    "mobx": "6.13.7",
-    "mobx-react": "9.2.0",
+    "@lionweb/class-core": "0.7.0-beta.25",
+    "@lionweb/core": "0.7.0-beta.25",
+    "@lionweb/delta-protocol-client": "0.7.0-beta.25",
+    "@lionweb/delta-protocol-low-level-client-browser": "0.7.0-beta.25",
+    "@lionweb/json": "0.7.0-beta.25",
+    "mobx": "6.15.0",
+    "mobx-react": "9.2.1",
     "nanoid": "5.1.6",
-    "react": "19.1.1",
-    "react-dom": "19.1.1"
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "react-icons": "5.5.0"
   },
   "devDependencies": {
     "@parcel/transformer-typescript-tsc": "2.16.0",
-    "@types/react": "19.1.13",
-    "@types/react-dom": "19.1.9",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.1",
+    "http-server": "14.1.1",
     "parcel": "2.16.0",
-    "typescript": "5.9.2"
+    "typescript": "5.9.3"
   }
 }

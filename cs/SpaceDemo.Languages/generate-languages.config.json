@@ -1,0 +1,12 @@
+﻿[
+  {
+    "LanguageFile": "../../chunks/space.languages.json",
+    "OutputDir": "Languages/",
+    "Namespace": "Languages",
+    "PathPattern": "NamespaceInFilename",
+    "DotGSuffix": true,
+    "LionWebVersion": "2023.1",
+    "GeneratorConfig": {
+      "WritableInterfaces": true
+    }
+  }]

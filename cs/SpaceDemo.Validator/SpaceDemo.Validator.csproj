@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>SpaceDemo.Validator</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="LionWeb-CSharp" />
+      <PackageReference Include="LionWeb-CSharp-Protocol-Delta" />
+      <PackageReference Include="LionWeb-CSharp-WebSocket" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\SpaceDemo.Languages\SpaceDemo.Languages.csproj" />
+    </ItemGroup>
+
+</Project>

@@ -1,5 +1,0 @@
-language SpaceDSL
-    version: 0
-    entities (↓name):
-
-

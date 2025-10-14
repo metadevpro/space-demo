@@ -18,7 +18,7 @@ In directory `<git-root>/mps`, run
 In directory `<git-root>/mps`, run
 
 ```sh
-./gradlew build runCommandLineTool -Pargs=". -mspace-demo.home=. -ic -lc"
+./gradlew generateMps runCommandLineTool -Pargs=". -mspace-demo.home=. -ic -lc"
 ```
 
 Or, for convenience,

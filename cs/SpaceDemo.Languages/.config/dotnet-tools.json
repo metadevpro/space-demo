@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "isRoot": true,
+  "tools": {
+    "lionweb-csharp-generator-cli": {
+      "version": "0.4.0-alpha.1",
+      "commands": [
+        "LionWebGenerator"
+      ],
+      "rollForward": false
+    }
+  }
+}

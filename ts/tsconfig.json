@@ -2,9 +2,6 @@
   "compilerOptions": {
     "target": "es2021",
     "module": "nodenext",
-    "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true,
     "isolatedModules": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,

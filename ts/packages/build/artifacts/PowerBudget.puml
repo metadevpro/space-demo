@@ -1,0 +1,38 @@
+@startuml
+hide empty members
+
+' qualified name: "PowerBudget"
+
+
+interface IPowerModuleContent extends INamed
+interface IPowerParticipant {
+  peak: Integer?
+  continuous: Integer?
+}
+
+class PowerConsumer implements IPowerModuleContent, IPowerParticipant
+
+class PowerModule <<partition>> implements INamed
+
+class PowerSource implements IPowerModuleContent, IPowerParticipant {
+  kind: PowerSourceKind?
+}
+
+enum PowerSourceKind {
+  solar
+  nuclear
+  diesel
+}
+
+
+
+' relations:
+
+
+
+PowerConsumer "*" --> "*" PowerSource: providedFrom
+PowerModule "1" o--> "*" IPowerModuleContent: contents
+
+
+
+@enduml

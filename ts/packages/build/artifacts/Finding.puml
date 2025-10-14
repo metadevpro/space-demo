@@ -1,0 +1,26 @@
+@startuml
+hide empty members
+
+' qualified name: "Finding"
+
+
+annotation Finding {
+  severity: Severity?
+  message: String?
+  code: Integer?
+}
+
+enum Severity {
+  info
+  warning
+  error
+}
+
+
+
+' relations:
+
+
+
+
+@enduml

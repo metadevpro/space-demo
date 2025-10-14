@@ -1,13 +1,19 @@
-import {writeFileSync} from "fs"
-import {generateLanguage} from "@lionweb/class-core-generator"
-import {serializeLanguages} from "@lionweb/core"
-import {languageAsText, writeJsonAsFile} from "@lionweb/utilities"
+import { writeFileSync } from "fs"
+import { generateApiFromLanguages } from "@lionweb/class-core-generator"
+import { deserializeLanguagesWithIoLionWebMpsSpecific, repairIoLionWebMpsSpecificAnnotations } from "@lionweb/io-lionweb-mps-specific"
+import { LionWebJsonChunk } from "@lionweb/json"
+import { generatePlantUmlForLanguage, languagesAsText, readFileAsJson } from "@lionweb/utilities"
 
-import {spaceLanguage} from "./definition.js"
 
+const languagesJson = readFileAsJson("../../../chunks/space.languages.json") as LionWebJsonChunk
+repairIoLionWebMpsSpecificAnnotations(languagesJson)
+const spaceLanguages = deserializeLanguagesWithIoLionWebMpsSpecific(languagesJson)
 
-writeFileSync("artifacts/Space.language.txt", languageAsText(spaceLanguage))
-writeJsonAsFile("artifacts/Space.language.json", serializeLanguages(spaceLanguage))
+writeFileSync("artifacts/space.languages.txt", languagesAsText(spaceLanguages))
 
-generateLanguage(spaceLanguage, "../editor/src/gen", {})
+spaceLanguages.forEach((language) => {
+    writeFileSync(`artifacts/${language.name}.puml`, generatePlantUmlForLanguage(language))
+})
+
+generateApiFromLanguages(spaceLanguages, "../editor/src/gen")
 

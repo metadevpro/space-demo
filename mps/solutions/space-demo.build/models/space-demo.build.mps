@@ -120,7 +120,7 @@
       <property role="TrG5h" value="lionweb-mps.home" />
     </node>
     <node concept="2sgV4H" id="RDOtZ1fw$4" role="1l3spa">
-      <ref role="1l3spb" to="ffeo:3IKDaVZmzS6" />
+      <ref role="1l3spb" to="ffeo:3IKDaVZmzS6" resolve="mps" />
       <node concept="398BVA" id="RDOtZ1fw$5" role="2JcizS">
         <ref role="398BVh" node="RDOtZ1fw$3" resolve="mps_home" />
       </node>
@@ -139,7 +139,7 @@
           </node>
         </node>
         <node concept="m$_wl" id="RDOtZ1fw$t" role="39821P">
-          <ref role="m_rDy" node="RDOtZ1fw$c" resolve="space-demo" />
+          <ref role="m_rDy" node="RDOtZ1fw$c" resolve="spaceDemo" />
           <node concept="pUk6x" id="RDOtZ1fw$u" role="pUk7w" />
         </node>
       </node>
@@ -160,7 +160,7 @@
         <ref role="m$f5T" node="RDOtZ1fw$b" resolve="space-demo" />
       </node>
       <node concept="m$_yC" id="RDOtZ1fw$i" role="m$_yJ">
-        <ref role="m$_y1" to="ffeo:4k71ibbKLe8" />
+        <ref role="m$_y1" to="ffeo:4k71ibbKLe8" resolve="jetbrains.mps.core" />
       </node>
       <node concept="m$_yC" id="RDOtZ1fx6h" role="m$_yJ">
         <ref role="m$_y1" to="e6nc:5wsogBcGDKB" resolve="io.lionweb.mps" />
@@ -220,6 +220,58 @@
               </node>
             </node>
             <node concept="3qWCbU" id="RDOtZ1fx5b" role="3LXTna">
+              <property role="3qWCbO" value="icons/**, resources/**" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1E1JtD" id="5HNp1x9hLHv" role="2G$12L">
+        <property role="BnDLt" value="true" />
+        <property role="TrG5h" value="Finding" />
+        <property role="3LESm3" value="daeaf3e0-0c1d-4bee-941e-b0a10169a7a6" />
+        <node concept="55IIr" id="5HNp1x9hLHy" role="3LF7KH">
+          <node concept="2Ry0Ak" id="5HNp1x9hLH_" role="iGT6I">
+            <property role="2Ry0Am" value="languages" />
+            <node concept="2Ry0Ak" id="5HNp1x9hLHC" role="2Ry0An">
+              <property role="2Ry0Am" value="Finding" />
+              <node concept="2Ry0Ak" id="5HNp1x9hLHF" role="2Ry0An">
+                <property role="2Ry0Am" value="Finding.mpl" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1BupzO" id="5HNp1x9hLHO" role="3bR31x">
+          <property role="3ZfqAx" value="models" />
+          <property role="1Hdu6h" value="true" />
+          <property role="1HemKv" value="true" />
+          <node concept="3LXTmp" id="5HNp1x9hLHP" role="1HemKq">
+            <node concept="55IIr" id="5HNp1x9hLHK" role="3LXTmr">
+              <node concept="2Ry0Ak" id="5HNp1x9hLHL" role="iGT6I">
+                <property role="2Ry0Am" value="languages" />
+                <node concept="2Ry0Ak" id="5HNp1x9hLHM" role="2Ry0An">
+                  <property role="2Ry0Am" value="Finding" />
+                  <node concept="2Ry0Ak" id="5HNp1x9hLHN" role="2Ry0An">
+                    <property role="2Ry0Am" value="models" />
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3qWCbU" id="5HNp1x9hLHQ" role="3LXTna">
+              <property role="3qWCbO" value="**/*.mps, **/*.mpsr, **/.model" />
+            </node>
+          </node>
+        </node>
+        <node concept="3rtmxn" id="5HNp1x9hLHR" role="3bR31x">
+          <node concept="3LXTmp" id="5HNp1x9hLHS" role="3rtmxm">
+            <node concept="55IIr" id="5HNp1x9hLHT" role="3LXTmr">
+              <node concept="2Ry0Ak" id="5HNp1x9hLHU" role="iGT6I">
+                <property role="2Ry0Am" value="languages" />
+                <node concept="2Ry0Ak" id="5HNp1x9hLHV" role="2Ry0An">
+                  <property role="2Ry0Am" value="Finding" />
+                </node>
+              </node>
+            </node>
+            <node concept="3qWCbU" id="5HNp1x9hLHX" role="3LXTna">
               <property role="3qWCbO" value="icons/**, resources/**" />
             </node>
           </node>

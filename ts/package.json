@@ -14,17 +14,12 @@
     "rimraf": "6.0.1"
   },
   "scripts": {
-    "clean": "npm run clean -w packages --if-present && npx rimraf node_modules",
-    "generate": "npm run generate -w packages --if-present",
-    "build": "npm run build -w packages --if-present",
-    "start": "npm run start -w packages --if-present"
+    "clean": "npm run clean -w packages --if-present && npx rimraf node_modules .parcel-cache package-lock.json"
   },
   "private": true,
   "workspaces": [
     "./packages/build",
-    "./packages/editor"
-  ],
-  "dependencies": {
-    "typescript": "^5.9.3"
-  }
+    "./packages/editor",
+    "./packages/echo-ws-server"
+  ]
 }
