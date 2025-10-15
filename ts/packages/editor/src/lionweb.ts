@@ -62,7 +62,7 @@ export const initializeLionWeb = () => {
                             console.log(`subscribing to partition ${partitionId}`)
                             client.subscribeToPartitionContents(uniqueQueryId(), partitionId)
                                 .then((receivedModelJson) => {
-                                    const receivedModel = client.deserializer(receivedModelJson)
+                                    const receivedModel = client.deserializer(receivedModelJson).roots
                                     store.setModel(receivedModel)
                                     logModel(receivedModel)
                                     client.setModel(receivedModel)

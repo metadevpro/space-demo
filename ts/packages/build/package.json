@@ -20,10 +20,10 @@
     "generate": "node dist/generate.js"
   },
   "devDependencies": {
-    "@lionweb/class-core-generator": "0.7.0-beta.25",
-    "@lionweb/io-lionweb-mps-specific": "0.7.0-beta.25",
-    "@lionweb/json": "0.7.0-beta.25",
-    "@lionweb/utilities": "0.7.0-beta.25",
+    "@lionweb/class-core-generator": "0.7.0-beta.26",
+    "@lionweb/io-lionweb-mps-specific": "0.7.0-beta.26",
+    "@lionweb/json": "0.7.0-beta.26",
+    "@lionweb/utilities": "0.7.0-beta.26",
     "@types/node": "24.7.0",
     "typescript": "5.9.3"
   }
