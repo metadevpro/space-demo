@@ -25,17 +25,7 @@
         <child id="1002563151016780063" name="contents" index="3cEr30" />
       </concept>
     </language>
-    <language id="daeaf3e0-0c1d-4bee-941e-b0a10169a7a6" name="Finding">
-      <concept id="7395118629968815447" name="Finding.structure.Finding" flags="ng" index="3_yDxx">
-        <property id="7395118629968815463" name="message" index="3_yDxh" />
-        <property id="7395118629968815461" name="severity" index="3_yDxj" />
-        <property id="7395118629968919952" name="code" index="3_yK2A" />
-      </concept>
-    </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
-      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
-        <child id="5169995583184591170" name="smodelAttribute" index="lGtFl" />
-      </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
       </concept>
@@ -46,13 +36,8 @@
     <node concept="3cEr1r" id="RDOtZ1goTd" role="3cEr30">
       <property role="TrG5h" value="rtg0" />
       <property role="3cEr1o" value="RDOtZ1g66b/nuclear" />
-      <property role="3cEr1a" value="370" />
+      <property role="3cEr1a" value="600" />
       <property role="3cEr17" value="100" />
-      <node concept="3_yDxx" id="6qwJjq3aVQ5" role="lGtFl">
-        <property role="3_yDxj" value="6qwJjq3aylu/warning" />
-        <property role="3_yDxh" value="Total peak of consumers (530) exceeds source peak" />
-        <property role="3_yK2A" value="1" />
-      </node>
     </node>
     <node concept="3cEr1W" id="RDOtZ1gvOQ" role="3cEr30">
       <property role="TrG5h" value="comms" />
