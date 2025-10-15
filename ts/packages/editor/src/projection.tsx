@@ -13,6 +13,13 @@ const parsedNumberValue = (stringValue: string) =>
         ? undefined
         : parseInt(stringValue, 10)
 
+
+const Annotations = observer(({ node }: { node: INodeBase }) =>
+    node.annotations.length > 0 &&
+        node.annotations.map((annotation) => <Projection node={annotation} key={annotation.id} />)
+)
+
+
 export const Projection = observer(({ node }: { node: INodeBase }) => {
 
     if (node === undefined) {
@@ -38,14 +45,14 @@ export const Projection = observer(({ node }: { node: INodeBase }) => {
         return <div>
             <FaPlug/> power consumer <span style={{ fontWeight: 600, color: "#0070f3" }}> {node.name} </span>
             with peak <input type ="number" value={node.peak ?? ""} onChange={action((event) => {node.peak = parsedNumberValue(event.target.value)})} />
-            {node.annotations.length > 0 && node.annotations.map((anno) => <Projection node={anno} /> )}
+            <Annotations node={node} />
         </div>
     }
     if (node instanceof PowerSource) {
         return <div>
             <FaBatteryHalf/> power source<span style={{ fontWeight: 600, color: "#038112ff" }}> {node.name} </span>
             with peak <input type ="number" value={node.peak ?? ""} onChange={action((event) => {node.peak = parsedNumberValue(event.target.value)})} />
-            {node.annotations.length > 0 && node.annotations.map((anno) => <Projection node={anno} key={anno.id} /> )}
+            <Annotations node={node} />
         </div>
     }
 
