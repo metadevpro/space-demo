@@ -20,12 +20,12 @@
 1. Open Console window "Repo" in `space-demo/cs/SpaceDemo.Repository`
    * Use red color scheme
    * Type `dotnet run`
-1. Open Console window "Loader" in `space-demo/cs/SpaceDemo.Loader`
-   * Use blue color scheme
-   * Type `dotnet run ./../chunks`
 1. Open Console window "Validator" in `space-demo/cs/SpaceDemo.Validator`
    * Use green scheme
    * Type `dotnet run`
+1. Open Console window "Loader" in `space-demo/cs/SpaceDemo.Loader`
+    * Use blue color scheme
+    * Type `dotnet run ./../../chunks`
 1. Open Web browser A http://localhost:1234/ 
 1. Open Web browser B http://localhost:1234/
 1. Arrange web browser A, web browser B, console "Loader", console "Validator" in a 2x2 grid  
