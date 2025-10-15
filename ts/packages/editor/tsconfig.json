@@ -6,7 +6,7 @@
     "sourceMap": true,
     "rootDir": "src",
     "experimentalDecorators": true,
-    "jsx": "react",
+    "jsx": "react-jsx",
     "resolveJsonModule": true,
     "target": "esnext",
     "module": "esnext",

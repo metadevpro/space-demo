@@ -25,9 +25,10 @@ const trimTo = (text: string) =>
 
 
 export const initializeLionWeb = () => {
-    console.log(`creating client`)
     let queryNumber = 0
     const uniqueQueryId = () => `query-${++queryNumber}`
+
+    console.log(`creating client`)
     LionWebClient.create({
         clientId: "TS-client-1",
         url: "ws://localhost:40000",
@@ -43,11 +44,17 @@ export const initializeLionWeb = () => {
         }
     })
         .then((client) => {
+            /*
+             * By the way: apologies for the .then(...)-hell:
+             * I didn't manage to find out how to convince Parcel.js to correctly transpile await/async...
+             */
             console.log(`client created`)
+
             console.log(`signing in`)
             client.signOn(uniqueQueryId(), "myRepo")
                 .then(() => {
                     console.log(`signed on`)
+
                     console.log(`getting list of partitions`)
                     client.listPartitions(uniqueQueryId())
                         .then((partitionInfo) => {
@@ -59,29 +66,21 @@ export const initializeLionWeb = () => {
                                 return
                             }
                             const partitionId = partitionIds[0]
+
                             console.log(`subscribing to partition ${partitionId}`)
                             client.subscribeToPartitionContents(uniqueQueryId(), partitionId)
-                                .then((receivedModelJson) => {
-                                    const receivedModel = client.deserializer(receivedModelJson).roots
+                                .then((receivedPartitionJson) => {
+
+                                    console.log(`deserializing partition`)
+                                    const receivedModel = client.deserializer(receivedPartitionJson).roots
+                                    client.setModel(receivedModel)
                                     store.setModel(receivedModel)
                                     logModel(receivedModel)
-                                    client.setModel(receivedModel)
-                                    /*
-                                    setTimeout(() => {
-                                        if (client.model.length > 0 && client.model[0] instanceof PowerModule) {
-                                            console.log(`making changes, to check whether they are sent`)
-                                            const powerModule = client.model[0] as PowerModule
-                                            (powerModule.contents[0] as PowerSource).peak = 600
-                                            powerModule.name = "VGER"
-                                        }
-                                    }, 1)
-                                     */
-                                    console.log(`(done)`)
+
+                                    console.log(`(done initializing)`)
                                 })
                         })
                 })
         })
 }
-
-// TODO  (find out how to make Parcel understand await/async)
 

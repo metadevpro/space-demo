@@ -1,11 +1,6 @@
 import { INodeBase } from "@lionweb/class-core"
 import { action, makeObservable, observable } from "mobx"
 
-import { initializeLionWeb } from "./lionweb"
-
-
-initializeLionWeb()
-
 
 export class Store {
 
