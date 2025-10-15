@@ -115,9 +115,18 @@ public class Validator
 
     private void PutFinding(INode node, Finding finding)
     {
-        if (node.GetAnnotations().OfType<Finding>().Any(f =>
-                new Comparer([(IReadableNode)finding], [f]).AreEqual()))
+        var findings = ExtractFindings(node, finding.Code ?? -1);
+        if (findings.Count > 0)
+        {
+            var first = findings.First();
+            if (new Comparer([(IReadableNode)first], [finding]).AreEqual())
+                return;
+
+            Log($"Replacing finding {finding.Code} to {node.GetId()}");
+
+            first.ReplaceWith(finding);
             return;
+        }
 
         Log($"Adding finding {finding.Code} to {node.GetId()}");
         node.AddAnnotations([finding]);
@@ -125,12 +134,17 @@ public class Validator
 
     private void RemoveFinding(INode node, int code)
     {
-        var annotations = node.GetAnnotations().OfType<Finding>().Where(f => f.Code == code).ToList();
-        if (annotations.Count == 0)
+        var findings = ExtractFindings(node, code);
+        if (findings.Count == 0)
             return;
 
         Log($"Removing finding {code} from {node.GetId()}");
-        node.RemoveAnnotations(annotations);
+        node.RemoveAnnotations(findings);
+    }
+
+    private static List<Finding> ExtractFindings(INode node, int code)
+    {
+        return node.GetAnnotations().OfType<Finding>().Where(f => f.Code == code).ToList();
     }
 
     private static void Log(string message, bool header = false) =>
