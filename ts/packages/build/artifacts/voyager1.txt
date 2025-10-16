@@ -1,0 +1,34 @@
+PowerModule (id: 1002563151016857164) {
+    name = 'Voyager1'
+    contents:
+        PowerSource (id: 1002563151016857165) {
+            name = 'rtg0'
+            kind = nuclear
+            peak = 370
+            continuous = 100
+            @ Finding (id: 7395118629968919941) {
+                severity = warning
+                message = 'Total peak of consumers (530) exceeds source peak'
+                code = 1
+            }
+
+        }
+        PowerConsumer (id: 1002563151016885558) {
+            name = 'comms'
+            peak = 200
+            continuous = 0
+            providedFrom -> 1002563151016857165 (rtg0)
+        }
+        PowerConsumer (id: 1002563151016885528) {
+            name = 'sensorA'
+            peak = 200
+            continuous = 15
+            providedFrom -> 1002563151016857165 (rtg0)
+        }
+        PowerConsumer (id: 1002563151016885577) {
+            name = 'sensorB'
+            peak = 130
+            continuous = 0
+            providedFrom -> 1002563151016857165 (rtg0)
+        }
+}
