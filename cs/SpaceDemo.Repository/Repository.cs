@@ -10,11 +10,16 @@ namespace SpaceDemo.Repository;
 
 public class Repository
 {
-    public static void Main(string[] args)
+    public async static Task Main(string[] args)
     {
         Trace.Listeners.Add(new ConsoleTraceListener());
 
         Log($"server args: {string.Join(", ", args)}");
+
+        var nonInteractive = args.Length > 1
+            ? args[1] == "--non-interactive"
+            : false;
+
 
         var port = args.Length > 0
             ? int.Parse(args[0])
@@ -34,14 +39,30 @@ public class Repository
 
         webSocketServer.StartServer("localhost", port);
 
+        Console.WriteLine($"WS listening at port {port}...");
+
         var serverForest = new Forest();
 
-        var lionWebServer = new LionWebRepository(lionWebVersion, languages, "server",
-            serverForest, webSocketServer.Connector);
-        lionWebServer.CommunicationError += (_, exception) => Log(exception.ToString()); 
+        var lionWebServer = new LionWebRepository(lionWebVersion, languages, "server", serverForest, webSocketServer.Connector);
+        lionWebServer.CommunicationError += (_, exception) => Log(exception.ToString());
 
-        Console.ReadLine();
-        webSocketServer.Stop();
+        if (!nonInteractive)
+        {
+            Console.ReadLine();
+            webSocketServer.Stop();
+        }
+        else
+        {
+            int i = 0;
+            // For ever .....
+            while (true)
+            {
+                Console.WriteLine($"alive {i++} {DateTime.Now:O}");
+                await Task.Delay(10000);
+            }
+        }
+        Console.WriteLine("Closed repository.");
+        return;
     }
 
     private static void Log(string message, bool header = false) =>

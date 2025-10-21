@@ -1,0 +1,14 @@
+FROM node:25-alpine AS build
+WORKDIR /app
+COPY ts ts
+COPY chunks chunks
+
+WORKDIR /app/ts
+RUN npm i
+
+WORKDIR /app/ts/packages/build
+RUN npm run generate
+
+WORKDIR /app/ts/packages/editor
+
+CMD ["npm", "run", "prod"]

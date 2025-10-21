@@ -1,0 +1,27 @@
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+WORKDIR /app
+EXPOSE 80
+EXPOSE 443
+EXPOSE 40000
+
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+COPY chunks chunks
+COPY cs cs
+WORKDIR /src/cs
+RUN dotnet restore "SpaceDemo.sln"
+
+RUN dotnet build "SpaceDemo.sln" -c Release -o /app/build
+RUN dotnet test "SpaceDemo.sln" 
+
+FROM build AS publish
+RUN dotnet publish "SpaceDemo.sln" -c Release -o /app/publish
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+COPY --from=build /src/chunks chunks/
+COPY docker/start-all.sh .
+RUN chmod +x start-all.sh
+
+CMD ["sh", "/app/start-all.sh"]
