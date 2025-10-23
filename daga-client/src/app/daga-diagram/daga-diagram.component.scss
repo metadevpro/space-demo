@@ -1,0 +1,29 @@
+.annotations {
+  position: absolute;
+  bottom: 4rem;
+  left: 0;
+  box-sizing: border-box;
+  width: 17rem;
+  margin: 1rem;
+
+  .annotation {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #f7f3d2;
+    color: #794b11;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+
+    span {
+      text-align: center;
+    }
+  }
+}

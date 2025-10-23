@@ -1,1 +1,9 @@
 <daga-diagram [config]="config" />
+<div class="annotations">
+  @for(annotation of annotations | keyvalue; track annotation.value) {
+  <div class="annotation">
+    <img src="diagram/decorator/warning.svg" />
+    <span>{{ annotation.value }}</span>
+  </div>
+  }
+</div>

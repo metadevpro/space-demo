@@ -9,5 +9,5 @@ import { VERSION } from '../../version';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  version = VERSION + ' alpha';
+  version = VERSION;
 }
