@@ -23,11 +23,11 @@
     "prod": "http-server dist/ --port 1234"
   },
   "dependencies": {
-    "@lionweb/class-core": "0.7.0-beta.26",
-    "@lionweb/core": "0.7.0-beta.26",
-    "@lionweb/delta-protocol-client": "0.7.0-beta.26",
-    "@lionweb/delta-protocol-low-level-client-browser": "0.7.0-beta.26",
-    "@lionweb/json": "0.7.0-beta.26",
+    "@lionweb/class-core": "0.7.0-beta.28",
+    "@lionweb/core": "0.7.0-beta.28",
+    "@lionweb/delta-protocol-client": "0.7.0-beta.28",
+    "@lionweb/delta-protocol-low-level-client-browser": "0.7.0-beta.28",
+    "@lionweb/json": "0.7.0-beta.28",
     "mobx": "6.15.0",
     "mobx-react": "9.2.1",
     "nanoid": "5.1.6",

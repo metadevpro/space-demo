@@ -72,7 +72,7 @@ export const initializeLionWeb = () => {
                                 .then((receivedPartitionJson) => {
 
                                     console.log(`deserializing partition`)
-                                    const receivedModel = client.deserializer(receivedPartitionJson).roots
+                                    const receivedModel = client.deserialize(receivedPartitionJson)
                                     client.setModel(receivedModel)
                                     store.setModel(receivedModel)
                                     logModel(receivedModel)
