@@ -2,7 +2,7 @@ import { writeFileSync } from "fs"
 import { generateApiFromLanguages } from "@lionweb/class-core-generator"
 import { deserializeLanguagesWithIoLionWebMpsSpecific, repairIoLionWebMpsSpecificAnnotations } from "@lionweb/io-lionweb-mps-specific"
 import { LionWebJsonChunk } from "@lionweb/json"
-import { generatePlantUmlForLanguage, languagesAsText, readFileAsJson } from "@lionweb/utilities"
+import { generatePlantUmlForLanguage, genericAsTreeText, languagesAsText, readFileAsJson } from "@lionweb/utilities"
 
 
 const languagesJson = readFileAsJson("../../../chunks/space.languages.json") as LionWebJsonChunk
@@ -16,4 +16,8 @@ spaceLanguages.forEach((language) => {
 })
 
 generateApiFromLanguages(spaceLanguages, "../editor/src/gen")
+
+
+const modelJson = readFileAsJson("../../../chunks/voyager1.instance.json") as LionWebJsonChunk
+writeFileSync(`artifacts/voyager1.txt`, genericAsTreeText(modelJson, spaceLanguages))
 
