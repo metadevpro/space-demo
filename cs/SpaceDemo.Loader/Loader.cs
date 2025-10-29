@@ -31,8 +31,8 @@ class Loader
         Trace.Listeners.Add(new ConsoleTraceListener());
 
         string name = "Loader";
-        string serverIp = "localhost";
-        int serverPort = 40000;
+        string serverIp = args.Count() >= 1 ? args[1] : "localhost";
+        int serverPort = args.Count() >= 2 ? int.Parse(args[2]) : 40000;
         var repositoryId = "myRepo";
 
         Log($"Starting client {name} to connect to {serverIp}:{serverPort}@{repositoryId}");
@@ -163,7 +163,8 @@ class Loader
                     if (d.Link is null)
                     {
                         r.RemoveAnnotations([n]);
-                    }else if (d.Link.Multiple)
+                    }
+                    else if (d.Link.Multiple)
                     {
                         var currentValue = d.Link.AsNodes<IReadableNode>(r.Get(d.Link)).ToList();
                         currentValue.Remove(n);

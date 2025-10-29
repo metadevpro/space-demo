@@ -1,0 +1,48 @@
+networks:
+  space:
+
+services:
+  server:
+    build: nginx/.
+    ports:
+      - 81:80
+    networks:
+      - space
+    depends_on:
+      - repository
+  repository:
+    hostname: repository
+    image: spacedsl-cs
+    #command: ["./SpaceDemo.Repository", "40000", "--non-interactive"]
+    environment:
+      - ASPNETCORE_URLS=http://+:80
+    ports:
+      - "40000:80"
+    networks:
+      - space
+  # loader:
+  #   image: spacedsl-cs
+  #   command: ["./SpaceDemo.Loader", "../../chunks/", "server", "40000"]
+  #   # command: ["sleep", "10000000"]
+  #   depends_on:
+  #     - server
+  #   networks:
+  #     - space
+  client1-react:
+    image: spacedsl-ts
+    ports:
+      - 1234:1234
+    networks:
+      - space
+  client2-react:
+    image: spacedsl-ts
+    ports:
+      - 1235:1234
+    networks:
+      - space
+  # client3-daga:
+  #   build: ../daga-client/Dockerfile
+  #   ports:
+  #     - 1236:80
+  #   networks:
+  #     - space
